@@ -1,0 +1,32 @@
+#header {
+    width: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: -1em;
+    background-color: #00ddff;
+}
+#header title {
+
+}
+
+#nav-bar {
+    width: 20%;
+    left: 0;
+    font-size: 1.2em;
+    text-indent: 8px;
+    position: absolute;
+    background-color: #9bed5c;
+}
+
+#content {
+    width: 80%;
+    left: 20%;
+    text-indent: 5px;
+    position: absolute;
+    background-color: #ed7f88;
+}
+
+body {
+    font-size: 100%;
+    background-color: #e1ff3a;
+}
