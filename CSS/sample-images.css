@@ -1,0 +1,11 @@
+#image-table {
+    width: 100%;
+    text-align: center;
+    background-color: #00ddff;
+}
+
+table img {
+    width: 100%;
+    height: auto;
+    image-orientation: from-image;
+}

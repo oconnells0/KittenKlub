@@ -1,28 +1,58 @@
 #header {
+    margin: 0px auto;
     width: 100%;
-    text-align: center;
-    font-size: 2.2em;
-    margin-bottom: -1em;
+    height: 80px;
     background-color: #00ddff;
 }
-#header title {
+#title {
+    float: left;
+    margin: 0px;
+    width: 60%;
+    height: 80px;
+    text-align: center;
+    font-size: 120%;
+    background-color: #ff0000;
+}
+#logo {
+    float: left;
+    margin: 0px;
+    width: 20%;
+    height: 80px;
+    text-align: center;
+    background-color: #0608ff;
+}
+#img {
+    height: 80px;
+    width: auto;
+}
 
+#something {
+    float: left;
+    margin: 0px;
+    width: 20%;
+    height: 80px;
+    background-color: #000000;
+}
+
+#everything {
+    margin: 0px auto;
+    width: 100%;
 }
 
 #nav-bar {
+    float: left;
+    margin: 0px;
     width: 20%;
-    left: 0;
     font-size: 1.2em;
     text-indent: 8px;
-    position: absolute;
     background-color: #9bed5c;
 }
 
 #content {
+    float: left;
+    margin: 0px;
     width: 80%;
-    left: 20%;
     text-indent: 5px;
-    position: absolute;
     background-color: #ed7f88;
 }
 
