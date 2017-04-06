@@ -60,3 +60,19 @@ body {
     font-size: 100%;
     background-color: #e1ff3a;
 }
+
+button {
+    background-color: #3eebff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+#view-button {
+    position: relative;
+    left: 20px;
+    text-align: center;
+}

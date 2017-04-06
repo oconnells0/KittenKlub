@@ -1,0 +1,37 @@
+#pic-title {
+    text-align: center;
+}
+#poster {
+    position: relative;
+    float: right;
+    text-align: right;
+    right: 0px;
+    width: 50%;
+    background-color: #06ffbe;
+}
+#likes {
+    position: relative;
+    float: left;
+    width: 30%;
+    font-size: 150%;
+    top: -10px;
+    background-color: #9bed5c;
+}
+#like-button {
+    float: left;
+}
+
+#img1 {
+    width: 100%;
+    height: auto;
+    image-orientation: from-image;
+}
+
+.comment {
+    clear: both;
+    margin: 5px;
+    border: 2px solid black;
+}
+.bold {
+    font-weight: bold;
+}
