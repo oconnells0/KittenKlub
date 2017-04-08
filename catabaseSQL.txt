@@ -1,0 +1,11 @@
+sql for outside elvis
+	hostname: catabase.czgy5iqmw2jk.us-east-2.rds.amazonaws.com
+	port:	  3306
+	u: catabase
+	p: catabase
+
+
+sql on elvis
+	u: crinitem0
+	p: catabase
+	"use crinitem0"
