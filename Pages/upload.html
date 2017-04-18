@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <title>Kitten Klub - Upload</title>
+    <link rel="shortcut icon" href="../Pics/CatIcon.png" />
+    <link rel="stylesheet" href="../CSS/home.css">
+</head>
+
+<body>
+<div id="header">
+
+    <div id="logo">
+        <img id="img" src="../Pics/CatIcon.png" alt="">
+    </div><!-- /logo -->
+
+    <div id="title">
+        <h1>Kitten Klub</h1>
+        <a id="home-link" href="./home.html"
+           title="Link to home page">
+        </a>
+    </div><!-- /title -->
+
+    <div id="userNavBar">
+        <h2><a href="userprofile.html">Profile</a></h2>
+    </div><!-- /userNavBar -->
+
+</div><!-- /header -->
+
+
+
+<div id="everything">
+
+    <div id="nav-bar">
+        <p><a href="./home.html">Home</a></p>
+        <p><a href="./sample-images.html">Sample</a></p>
+        <p><a href="./sample-image-page.html">Sample Post</a></p>
+    </div><!-- /nav-bar -->
+
+    <div id="content">
+        <h1 id="upload">Upload</h1>
+        <div id="description">
+            <form enctype="multipart/form-data" method="post" action="upload.php">
+                <table>
+                    <tr>
+                        <td>
+                           Enter a title for your post
+                        </td>
+                        <td>
+                            <input type="text" name="title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter a description of your post
+                        </td>
+                        <td>
+                            <input type="text" name="description">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Picture to upload:
+                        </td>
+                        <td>
+                            <input type="file" name="submission">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
