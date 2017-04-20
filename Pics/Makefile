@@ -7,8 +7,8 @@
 # projects.
 
 DESTDIR = /home/crinitem0/public_html/web/finalProj/Pics
-TARGETS = CatIcon.png pawprintheart.jpg
-SOURCES = CatIcon.png pawprintheart.jpg
+TARGETS = *
+SOURCES = *
 
 # This target is just here to be the top target in the Makefile.
 # There's nothing to compile for this one.
