@@ -24,7 +24,7 @@
 
   //Create a directory for the user
   if(file_exists("" . $dirname)){
-    echo "Folder exists";
+    echo "...Folder exists";
   }else{
     mkdir("$dirname", 0777);
     chmod("$dirname", 0777);
@@ -45,25 +45,27 @@
   }else{
     if(copy($_FILES["submission"]["tmp_name"], $targetname)){
       chmod($targetname, 0444);
+
+      //Will eventually need to be changed to add actual userID
+      //File is saved in a folder called ../Pics/UPLOADED
+      //This folder must exist relative to wherever you're calling
+      //the php file from, or else your photo will not be uploaded
+      //Don't change it, it works fine, I've tested it many times
+      $query = "INSERT into `catabase`.`posts`
+                (`userID`,`title`,`description`,`photo-url`)
+                values('0', :title, :desc, :url)";
+      $stmt = $dbh->prepare($query);
+      $stmt->bindParam('title', $title, PDO::PARAM_STR, 45);
+      $stmt->bindParam('desc', $description, PDO::PARAM_STR, 160);
+      $stmt->bindParam('url', $targetname, PDO::PARAM_STR, 45);
+      $stmt->execute() or die("Failed");
+      $stmt = null;
     }else{
       die("Error copying " . $_FILES["submission"]["name"]);
     }
   }
 
-  //Will eventually need to be changed to add actual userID
-  //File is saved in a folder called ../Pics/UPLOADED
-  //This folder must exist relative to wherever you're calling
-  //the php file from, or else your photo will not be uploaded
-  //Don't change it, it works fine, I've tested it many times
-  $query = "INSERT into `catabase`.`posts`
-            (`userID`,`title`,`description`,`photo-url`)
-            values('0', :title, :desc, :url)";
-  $stmt = $dbh->prepare($query);
-  $stmt->bindParam('title', $title, PDO::PARAM_STR, 45);
-  $stmt->bindParam('desc', $description, PDO::PARAM_STR, 160);
-  $stmt->bindParam('url', $targetname, PDO::PARAM_STR, 45);
-  $stmt->execute() or die("Failed");
-  $stmt = null;
+
 
 
 
