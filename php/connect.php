@@ -9,7 +9,7 @@ try {
     $dbh = new PDO("mysql:host=$hostname;dbname=catabase",
                    $username, $password);
     /*** echo a message saying we have connected ***/
-    echo 'Connected to database';
+    echo 'Connected to database' + '\n';
 }
 catch(PDOException $e)
 {
