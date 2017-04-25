@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <title>Kitten Klub - Register</title>
+    <title>Kitten Klub - Login</title>
     <link rel="shortcut icon" href="../Pics/CatIcon.png" />
     <link rel="stylesheet" href="../CSS/home.css">
 </head>
@@ -40,10 +40,10 @@
 
     <div id="content">
 
-        <h2>User Registration</h2>
+        <h2>Login</h2>
         <form name="RegistrationForm"
               enctype="multipart/form-data" method="post"
-              action="http://localhost/register.php"
+              action="http://localhost/login.php"
               onsubmit="return validateForm()">
             <!-- action="../php/register.php"> -->
             <table>
@@ -52,15 +52,7 @@
                         Enter a username
                     </td>
                     <td>
-                        <input type="text" name="username1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        confirm username
-                    </td>
-                    <td>
-                        <input type="text" name="username2">
+                        <input type="text" name="username">
                     </td>
                 </tr>
                 <tr>
@@ -68,15 +60,7 @@
                         Enter a password
                     </td>
                     <td>
-                        <input type="password" name="password1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Confirm password
-                    </td>
-                    <td>
-                        <input type="password" name="password2">
+                        <input type="password" name="password">
                     </td>
                 </tr>
                 <tr>
@@ -87,28 +71,18 @@
                 </tr>
             </table>
         </form>
-        <p><a href="./login.html">Log In To An Existing User</a></p>
+        <p><a href="./register.html">Register A New User</a></p>
     </div><!-- /content -->
 
 </div>
 
 <script>
     function validateForm() {
-        var username1 = document.forms["RegistrationForm"]["username1"].value;
-        var username2 = document.forms["RegistrationForm"]["username2"].value;
-        var password1 = document.forms["RegistrationForm"]["password1"].value;
-        var password2 = document.forms["RegistrationForm"]["password2"].value;
-        if (username1 == "" || username2 == "" || password1 == "" || password2 == "") {
+        var username = document.forms["RegistrationForm"]["username"].value;
+        var password = document.forms["RegistrationForm"]["password"].value;
+        if (username == "" || password == "") {
             alert("You left some fields blank");
             return false;
-        }
-        if (username1 != username2) {
-            alert("usernames do not match");
-            return false;
-        }
-        if(password1 != password2) {
-            alert("passwords do not match");
-            return false
         }
         //ready to submit form
     }
