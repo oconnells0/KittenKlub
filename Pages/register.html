@@ -38,54 +38,79 @@
     </div><!-- /nav-bar -->
 
     <div id="content">
+
         <h2>User Registration</h2>
-        <form enctype="multipart/form-data" method="post"
-              action="http://localhost/register.php">
+        <form name="RegistrationForm"
+              enctype="multipart/form-data" method="post"
+              action="http://localhost/register.php"
+              onsubmit="return validateForm()">
             <!-- action="../php/register.php"> -->
-        <table>
-            <tr>
-                <td>
-                    Enter a username
-                </td>
-                <td>
-                    <input type="text" name="username1">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    confirm username
-                </td>
-                <td>
-                    <input type="text" name="username2">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Enter a password
-                </td>
-                <td>
-                    <input type="password" name="password1">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Confirm password
-                </td>
-                <td>
-                    <input type="password" name="password2">
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" name="submit">
-                </td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <td>
+                        Enter a username
+                    </td>
+                    <td>
+                        <input type="text" name="username1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        confirm username
+                    </td>
+                    <td>
+                        <input type="text" name="username2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter a password
+                    </td>
+                    <td>
+                        <input type="password" name="password1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm password
+                    </td>
+                    <td>
+                        <input type="password" name="password2">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="submit">
+                    </td>
+                </tr>
+            </table>
         </form>
     </div><!-- /content -->
 
 </div>
+
+<script>
+    function validateForm() {
+        var username1 = document.forms["RegistrationForm"]["username1"].value;
+        var username2 = document.forms["RegistrationForm"]["username2"].value;
+        var password1 = document.forms["RegistrationForm"]["password1"].value;
+        var password2 = document.forms["RegistrationForm"]["password2"].value;
+        if (username1 == "" || username2 == "" || password1 == "" || password2 == "") {
+            alert("You left some fields blank");
+            return false;
+        }
+        if (username1 != username2) {
+            alert("usernames do not match");
+            return false;
+        }
+        if(password1 != password2) {
+            alert("passwords do not match");
+            return false
+        }
+        //ready to submit form
+    }
+</script>
 
 </body>
 
