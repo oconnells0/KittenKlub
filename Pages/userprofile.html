@@ -5,6 +5,8 @@
     <link rel="shortcut icon" href="../Pics/CatIcon.png" />
     <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/sample-images.css">
+    <script type="text/javascript"
+          src="http://code.jquery.com/jquery-1.9.0.min.js"> </script>
 </head>
 
 <body>
@@ -39,29 +41,15 @@
 
     <div id="content">
         <h2 id="username">Username</h2> <!-- Will be changed with database call for actual username -->
-        <h3 id="numImages">Your Images (9)</h3> <!-- Will be changed with database call -->
+        <h3 id="numImages">Your Images</h3> <!-- Will be changed with database call -->
         <table id="image-table">
             <!-- Display all images owned by this user -->
-            <tr>
-                <td><img src="../Pics/Sample/IMG_20141203_152008_307.jpg"/></td>
-                <td><img src="../Pics/Sample/IMG_20150130_151509_614.jpg"/></td>
-                <td><img src="../Pics/Sample/20160212_174633.jpg"/></td>
-            </tr>
-            <tr>
-                <td><img src="../Pics/Sample/20150829_125436.jpg"/></td>
-                <td><img src="../Pics/Sample/20160712_202840.jpg"/></td>
-                <td><img src="../Pics/Sample/20160723_172256.jpg"/></td>
-            </tr>
-            <tr>
-                <td><img src="../Pics/Sample/20160724_082438.jpg"/></td>
-                <td><img src="../Pics/Sample/20160815_121059.jpg"/></td>
-                <td><img src="../Pics/Sample/20160816_184406.jpg"/></td>
-            </tr>
         </table>
     </div><!-- /content -->
 
 </div>
 
-</body>
+<script src="../js/getImages.js"></script>
 
+</body>
 </html>
